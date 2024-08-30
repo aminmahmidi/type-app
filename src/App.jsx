@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { Moon,Sun } from "@phosphor-icons/react";
+import { Moon,Sun, Copy } from "@phosphor-icons/react";
 function App() {
   const [text, setText] = useState("");
   const [wordCount, setWordCount] = useState(0);
@@ -39,10 +39,15 @@ function App() {
       <div className={isToggle ? " container light" : "container dark"}>
         <section className="text-container">
           <div className="top-section">
-            <h2>شمارنده تعداد کارکترها به دقایق</h2>
-            <button type="button" className="toggle" onClick={toggle}>
-              {isToggle ? <Moon /> : <Sun />}
-            </button>
+            <h3>شمارنده تعداد کارکترها به دقایق</h3>
+            <div className="top-section-btn">
+              <button type="button" className="copy-btn">
+                <Copy size={18} /> کپی متن
+              </button>
+              <button type="button" className="toggle" onClick={toggle}>
+                {isToggle ? <Moon size={18} /> : <Sun size={18} />}
+              </button>
+            </div>
           </div>
           <div>
             <textarea
