@@ -28,7 +28,7 @@ function App() {
     setCharCount(text.length);
   }, [text]);
   const wordTimer = text.split(/\s+/).length;
-  const averageWPM = 90;
+  const averageWPM = 220;
   const estimatedReadingTime = Math.ceil(wordTimer / averageWPM);
   const toggle = () => {
     setIsToggle(!isToggle);
